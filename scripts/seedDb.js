@@ -1,4 +1,5 @@
-const { Profile, Contract, Job } = require('../src/model');
+const { Profile, Contract, Job } = require('../src/models/model');
+const sequelize = require('../src/config/sequelize');
 
 /* WARNING THIS WILL DROP THE CURRENT DATABASE */
 seed();
@@ -8,6 +9,13 @@ async function seed() {
   await Profile.sync({ force: true });
   await Contract.sync({ force: true });
   await Job.sync({ force: true });
+
+  sequelize.sync().then(() => {
+    console.log('Tables created successfully!');
+ }).catch((error) => {
+    console.error('Unable to create table : ', error);
+ });
+ 
   //insert data
   await Promise.all([
    Profile.create({
