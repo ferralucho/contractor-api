@@ -22,10 +22,7 @@ class AdminService {
                 }
             )
 
-            if (results.length > 0) {
-                return results
-            }
-            return `No client results for the the time frame`
+            return results
         } catch (err) {
             throw new Error(err)
         }
