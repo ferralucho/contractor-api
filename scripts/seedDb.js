@@ -242,7 +242,7 @@ async function seed() {
     }),
     Job.create({
       description: 'work',
-      price: 109,
+      price: 1,
       paid:false,
       ContractId: 10,
     }),

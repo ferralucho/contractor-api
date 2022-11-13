@@ -1,4 +1,4 @@
-const {Op} = require("sequelize");
+const {Op} = require("sequelize")
 
 class ContractService {
     constructor(Contract) {
@@ -14,10 +14,10 @@ class ContractService {
             })
 
             if (contractFound) {
-                const owned = contractFound.ClientId === profileId || contractFound.ContractorId === profileId;
+                const owned = contractFound.ClientId === profileId || contractFound.ContractorId === profileId
 
                 if (!owned) {
-                    throw new Error(`Contract ${contractId} is not for profile ${profileId}`);
+                    throw new Error(`Contract ${contractId} is not for profile ${profileId}`)
                 }
             }
 
