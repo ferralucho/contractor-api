@@ -109,3 +109,5 @@ Implement Oauth 2.0, use to access resources, use middleware for authentication 
 
 ### Unit tests
 Add more unit tests to the different services
+
+Some more best practices https://github.com/goldbergyoni/nodebestpractices
