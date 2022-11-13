@@ -145,6 +145,13 @@ async function seed() {
       ClientId: 4,
       ContractorId: 8
     }),
+    Contract.create({
+      id:10,
+      terms: 'bla bla bla',
+      status: 'in_progress',
+      ClientId: 4,
+      ContractorId: 8
+    }),
     Job.create({
       description: 'work',
       price: 200,
@@ -233,6 +240,11 @@ async function seed() {
       paymentDate:'2020-08-14T23:11:26.737Z',
       ContractId: 3,
     }),
-    
+    Job.create({
+      description: 'work',
+      price: 109,
+      paid:false,
+      ContractId: 10,
+    }),
   ]);
 }
