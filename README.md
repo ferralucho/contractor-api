@@ -38,6 +38,21 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
 - To authenticate users use the `getProfile` middleware that is located under src/middleware/getProfile.js. users are authenticated by passing `profile_id` in the request header. after a user is authenticated his profile will be available under `req.profile`. make sure only users that are on the contract can access their contracts.
 - The server is running on port 3001.
 
+
+### Directory structure
+
+```shell
+src
+  ├── app.js         app entry point
+  ├── /routes        controller layer: api routes
+  ├── /config        config settings
+  ├── /services      service layer: business logic
+  ├── /models        data access layer: database models	
+test       
+  ├── /unit          unit test suites
+  ├── /integration   test api routes
+ ```
+
 ## APIs To Implement 
 
 Below is a list of the required API's for the application.
