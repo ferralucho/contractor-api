@@ -8,7 +8,7 @@ let PROFILE_ID = '6'
 
 afterAll(async () => {
   await sequelize.close()
-});
+})
 
 describe('Test the contracts path', () => {
   test('It should get contract by id', async () => {
@@ -17,7 +17,7 @@ describe('Test the contracts path', () => {
       .send()
       .set('profile_id', PROFILE_ID)
     expect(response.statusCode).toBe(200)
-  });
+  })
 
   test('It should get all contracts for the user', async () => {
     const response = await request(app).get(API_CONTRACTS).set('profile_id', PROFILE_ID)

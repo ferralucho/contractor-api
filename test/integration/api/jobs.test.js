@@ -4,11 +4,11 @@ const app = require('../../../src/app')
 const sequelize = require('../../../src/config/sequelize')
 
 const API_JOBS = `${config.API_BASE}/jobs`
-let PROFILE_ID = '8'
+const PROFILE_ID = '8'
 
 afterAll(async () => {
   await sequelize.close()
-});
+})
 
 describe('Test the jobs path', () => {
   test('It should get unpaid jobs', async () => {

@@ -1,5 +1,5 @@
-const { Op } = require("sequelize");
-const sequelize = require('../config/sequelize');
+const { Op } = require('sequelize')
+const sequelize = require('../config/sequelize')
 
 class BalanceService {
   constructor(Job, Contract, Profile, JobService) {
@@ -13,8 +13,8 @@ class BalanceService {
     try {
       const jobs = await this.jobService.getAllUnpaidByUser(debitProfileId)
 
-      const amount = jobs.length > 0 ? jobs.map(job => job.price).reduce((a1, a2) => a1 + a2, 0) : 0
-      if (amount > 0 && depositAmount > (amount / 4)) {
+      const amount = jobs.length > 0 ? jobs.map((job) => job.price).reduce((a1, a2) => a1 + a2, 0) : 0
+      if (amount > 0 && depositAmount > amount / 4) {
         throw new Error(`Client can not deposit more than 25% total of jobs to pay`)
       }
       const t = await sequelize.transaction()
@@ -39,7 +39,6 @@ class BalanceService {
       throw new Error(err)
     }
   }
-
 }
 
 module.exports = BalanceService
