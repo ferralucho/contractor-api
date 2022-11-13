@@ -92,3 +92,20 @@ Below is a list of the required API's for the application.
     }
 ]
 ```
+## This backend can be improved by implementing 
+
+### Logging
+ The choice of logging depends on your business requirement and resource constraints. Some good examples of logging frameworks are Bunyan, Winston, and Pino.
+
+### Databases 
+
+You can use MySql, PostgreSQL
+
+### Error Handling
+Formatting error messages
+
+### Oauth Authentication
+Implement Oauth 2.0, use to access resources, use middleware for authentication (JWT)
+
+### Unit tests
+Add more unit tests to the different services
