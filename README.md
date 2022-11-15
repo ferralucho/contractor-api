@@ -59,7 +59,7 @@ test
 
 Below is a list of the required API's for the application.
 
-1. **_GET_** `/contracts/:id` - This API is broken 😵! it should return the contract only if it belongs to the profile calling. better fix that!
+1. **_GET_** `/contracts/:id` - Return the contract only if it belongs to the profile calling.
 
 1. **_GET_** `/contracts` - Returns a list of contracts belonging to a user (client or contractor), the list should only contain non terminated contracts.
 
